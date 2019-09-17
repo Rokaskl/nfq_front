@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+.board {
+  background: grey;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  text-align: center;
+}
