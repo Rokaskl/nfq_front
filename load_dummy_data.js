@@ -2,8 +2,8 @@ $(document).ready(function() {
   $("#load-dummy").click(function() {
     var displayResources = $("#table");
     var Users = [];
-    Users = [];
-    users = JSON.parse(window.localStorage.getItem("users"));
+
+    //Users = JSON.parse(window.localStorage.getItem("users"));
 
     if (displayResources.text == null) {
       displayResources.text("Loading data from JSON source...");

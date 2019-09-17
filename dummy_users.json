@@ -1,26 +1,26 @@
 [
   {
     "name": "Rokas Rokaitis",
-    "id": 1
+    "spec": "FIRST"
   },
   {
     "name": "Petras Petraitis",
-    "id": 2
+    "spec": "FIRST"
   },
   {
     "name": "Jonas Jonaitis",
-    "id": 3
+    "spec": "SECOND"
   },
   {
     "name": "Antanas Antanaitis",
-    "id": 4
+    "spec": "SECOND"
   },
   {
     "name": "Kitas Petras",
-    "id": 5
+    "spec": "THIRD"
   },
   {
     "name": "Kitas Antanas",
-    "id": 6
+    "spec": "THIRD"
   }
 ]

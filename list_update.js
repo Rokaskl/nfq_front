@@ -1,18 +1,40 @@
 window.addEventListener("load", () => {
-  setInterval(updateUsers, 500);
-});
+  // setInterval(updateUsers, 100);
 
-function updateUsers() {
-  var displayResources = $("#table");
-
+  //function updateUsers() {
+  var displayResources = $("#tables");
+  var specialists = [];
   users = JSON.parse(window.localStorage.getItem("users"));
-  var output = "<table><thead><tr><th>Name</th></thead><tbody>";
+  var output;
+
   if (users != null) {
     users.forEach(user => {
-      output += "<tr><td>" + user.name + "</td><td>";
+      if (!specialists.includes(user.spec)) {
+        specialists.push(user.spec);
+        console.log(specialists);
+      }
     });
-    output += "</tbody></table>";
-    displayResources.html(output);
-    $("table").addClass("table");
+    specialists.forEach(specialist => {
+      output +=
+        `<H1>${specialist}</H1>` +
+        "<table><tr><th>Name</th><th>Specialist</th><th>Time</th>";
+      users.forEach(user => {
+        if (user.spec == specialist) {
+          output +=
+            "<tr><td>" +
+            user.name +
+            "</td><td>" +
+            user.spec +
+            "</td><td>" +
+            "--:--" +
+            "</td></tr>";
+        }
+      });
+      output += "</table>";
+      displayResources.html(output);
+      $("table").addClass("table");
+    });
+
+    //}
   }
-}
+});
