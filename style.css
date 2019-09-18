@@ -3,15 +3,43 @@
   padding: 0;
 }
 .container {
-  width: 100vw;
-  height: 100vh;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  justify-self: center;
 }
-.board {
-  background: grey;
+
+th,
+td {
+  font-family: "Roboto", sans-serif;
+  width: 200px;
+  height: 30px;
+  border-bottom: 1px solid #ddd;
 }
-ul {
-  list-style-type: none;
+th {
+  font-family: "Montserrat", sans-serif;
 }
-li {
+.table {
+  justify-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
   text-align: center;
+}
+h1 {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+h1::before {
+  content: "Specialist : ";
+}
+table tbody tr:nth-child(2) {
+  background-color: greenyellow;
+}
+table tbody tr:nth-child(3n + 3) {
+  background-color: azure;
 }
