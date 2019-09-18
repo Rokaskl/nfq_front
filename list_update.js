@@ -1,11 +1,20 @@
 window.addEventListener("load", () => {
-  // setInterval(updateUsers, 100);
+  updateUsers();
+});
+window.addEventListener("storage", () => {
+  updateUsers();
+});
 
-  //function updateUsers() {
-  var displayResources = $("#tables");
+function updateUsers() {
+  console.log("Updating tables");
+  var displayResources = document.querySelector("#tables");
   var specialists = [];
-  users = JSON.parse(window.localStorage.getItem("users"));
-  var output;
+  var users = [];
+  var output = "";
+  if (typeof window.localStorage.getItem("users") !== undefined) {
+    users = JSON.parse(window.localStorage.getItem("users"));
+    console.log(users);
+  }
 
   if (users != null) {
     users.forEach(user => {
@@ -31,10 +40,8 @@ window.addEventListener("load", () => {
         }
       });
       output += "</table>";
-      displayResources.html(output);
-      $("table").addClass("table");
+      displayResources.innerHTML = output;
+      document.querySelector("table").setAttribute("class", "table");
     });
-
-    //}
   }
-});
+}
