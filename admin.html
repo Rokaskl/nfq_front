@@ -15,18 +15,29 @@
   <body>
     <a href="index.html"> Table Page</a>
 
-    <form >
+    <form  >
       <p>Name : </p>
       <input id="name" type="text" size="50"/>
       <p>Specialist : </p>
-      <input id="spec" type="text" size ="50" />
+      <select id="select-spec">
+
+      </select>
     </br>
-      <button type= "button"id="add-user" >Add new</button>
+      <button type= "button"id="add-user" >Add Visit</button>
+    </br>
+
+      <button type = "button" id="new-spec-btn">New specialist</button>
+
     </form>
-
+    <form class= "new-spec-form">
+      <p>Secialist</p>
+      <input id="new-spec-name" />
+      <button type = "button" id="add-spec">Add Specialist</button>
+    </form>
     <button id="load-dummy">Load Test Data</button>
-
+    
     <script src="add_user.js"></script>
+    <script src="add_specialist.js"></script>
 
     <script src="load_dummy_data.js"></script>
   </body>

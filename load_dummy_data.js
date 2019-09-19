@@ -2,7 +2,18 @@ window.addEventListener("load", function() {
   document.querySelector("#load-dummy").addEventListener("click", function() {
     loadJSON(function(response) {
       if (response != null) {
+        var users = [];
+        var specialists = [];
+        users = JSON.parse(response);
+        if (users != null) {
+          users.forEach(user => {
+            if (!specialists.includes(user.spec)) {
+              specialists.push(user.spec);
+            }
+          });
+        }
         window.localStorage.setItem("users", response);
+        window.localStorage.setItem("specialists", JSON.stringify(specialists));
       }
     });
   });

@@ -15,27 +15,21 @@ function updateUsers() {
     users = JSON.parse(window.localStorage.getItem("users"));
     console.log(users);
   }
+  if (typeof window.localStorage.getItem("specialists") !== undefined) {
+    specialists = JSON.parse(window.localStorage.getItem("specialists"));
+  }
 
-  if (users != null) {
+  specialists.forEach(specialist => {
+    output +=
+      `<div class="table" id= "${specialist}-table" = >` +
+      `<H1>${specialist}</H1>` +
+      "<table><tr><th>Name</th><th>Estimated time</th>";
     users.forEach(user => {
-      if (!specialists.includes(user.spec)) {
-        specialists.push(user.spec);
-        console.log(specialists);
+      if (user.spec == specialist) {
+        output += "<tr><td>" + user.name + "</td><td>" + "--:--" + "</td></tr>";
       }
     });
-    specialists.forEach(specialist => {
-      output +=
-        `<div class="table" id= "${specialist}-table" = >` +
-        `<H1>${specialist}</H1>` +
-        "<table><tr><th>Name</th><th>Estimated time</th>";
-      users.forEach(user => {
-        if (user.spec == specialist) {
-          output +=
-            "<tr><td>" + user.name + "</td><td>" + "--:--" + "</td></tr>";
-        }
-      });
-      output += "</table></div>";
-      displayResources.innerHTML = output;
-    });
-  }
+    output += "</table></div>";
+    displayResources.innerHTML = output;
+  });
 }

@@ -3,6 +3,7 @@
   padding: 0;
 }
 body {
+  z-index: 0;
   width: 100vw;
   height: 100vh;
   background: #0f2027; /* fallback for old browsers */
@@ -106,4 +107,21 @@ button:hover {
 }
 #load-dummy {
   background-color: #df6722;
+}
+#new-spec-btn {
+  background-color: #df6722;
+}
+.new-spec-form {
+  opacity: 0;
+}
+#select-spec {
+  cursor: pointer;
+
+  margin-bottom: 30px;
+  background: #fff;
+  width: 75%;
+  border: none;
+  padding: 10px 20px;
+
+  outline: none;
 }
