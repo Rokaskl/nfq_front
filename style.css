@@ -145,3 +145,13 @@ button:hover {
 #next-user {
   opacity: 0;
 }
+.later {
+  margin-top: 0px;
+  width: 100px;
+  height: 40px;
+  background: #df6722;
+}
+.later:hover {
+  opacity: 1;
+  width: 140px;
+}
