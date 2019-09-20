@@ -14,7 +14,18 @@ body {
   justify-content: space-around;
   align-content: flex-start;
 }
+.container div {
+  background-image: (white 0.1, white 1);
+  padding-top: 20px;
+  margin-top: 20px;
 
+  box-shadow: 10px 0 10px 0 black;
+  transition: 0.3s;
+}
+.container div:hover {
+  background-color: #1a3642;
+  transform: scale(1.05);
+}
 th,
 td {
   color: white;
@@ -124,4 +135,7 @@ button:hover {
   padding: 10px 20px;
 
   outline: none;
+}
+#next-user {
+  opacity: 0;
 }

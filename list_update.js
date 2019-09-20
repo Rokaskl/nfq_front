@@ -20,6 +20,12 @@ function updateUsers() {
   }
 
   specialists.forEach(specialist => {
+    output = "";
+    var emtyOutput =
+      `<div class="table" id= "${specialist}-table" = >` +
+      `<H1>${specialist}</H1>` +
+      "<table><tr><th>Name</th><th>Estimated time</th>" +
+      "</table></div>";
     output +=
       `<div class="table" id= "${specialist}-table" = >` +
       `<H1>${specialist}</H1>` +
@@ -30,6 +36,8 @@ function updateUsers() {
       }
     });
     output += "</table></div>";
-    displayResources.innerHTML = output;
+    if (output != emtyOutput) {
+      displayResources.innerHTML += output;
+    }
   });
 }
