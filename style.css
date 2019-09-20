@@ -155,3 +155,33 @@ button:hover {
   opacity: 1;
   width: 140px;
 }
+a {
+  font-family: "Montserrat", sans-serif;
+
+  margin-top: 20px;
+  width: 200px;
+  height: 20px;
+  background: #3628b6;
+  text-align: center;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+a:hover {
+  opacity: 1;
+  width: 220px;
+}
+.links {
+  flex-wrap: wrap;
+  display: flex;
+  align-content: flex-end;
+
+  justify-content: space-around;
+}
