@@ -13,7 +13,6 @@ function updateUsers() {
   var output = "";
   if (typeof window.localStorage.getItem("users") !== undefined) {
     users = JSON.parse(window.localStorage.getItem("users"));
-    console.log(users);
   }
   if (typeof window.localStorage.getItem("specialists") !== undefined) {
     specialists = JSON.parse(window.localStorage.getItem("specialists"));
