@@ -1,0 +1,26 @@
+[
+  {
+    "id": "0",
+    "name": "Specialistas Petraitis",
+    "avgTime": "2262",
+    "served": "10000",
+    "currentTime": "0",
+    "lastUpdate": "0"
+  },
+  {
+    "id": "1",
+    "name": "Specialistas Jonaitis",
+    "avgTime": "182",
+    "served": "10",
+    "currentTime": "0",
+    "lastUpdate": "0"
+  },
+  {
+    "id": "2",
+    "name": "Specialistas Juozaitis",
+    "avgTime": "92",
+    "served": "3",
+    "currentTime": "0",
+    "lastUpdate": "0"
+  }
+]

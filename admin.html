@@ -13,21 +13,21 @@
     <title>Admin Page</title>
   </head>
   <body>
-      
-
-    <form  >
-      <p>Name : </p>
-      <input id="name" type="text" size="50"/>
+      <div class="alert">
+        <h2> Visit was added successfully!</h2>
+      </div>
+    <form >
+      <p>Select user: </p>
+      <input id="name" list="users" type="text" size="50"/>
+      <datalist id="users">
+      </datalist>
       <p>Specialist : </p>
       <select id="select-spec">
-
       </select>
     </br>
       <button type= "button"id="add-user" >Add Visit</button>
     </br>
-
       <button type = "button" id="new-spec-btn">New specialist</button>
-
     </form>
     <form class= "new-spec-form">
       <p>Secialist</p>
@@ -40,9 +40,12 @@
       <a href="index.html"> Table Page</a>
       <a href="spec.html"> Specialist Page</a>
       </div>
-    <script src="add_user.js"></script>
-    <script src="add_specialist.js"></script>
+    <script src="/scripts/add_visit.js"></script>
+    <script src="/scripts/add_user.js"></script>
+    <script src="/scripts/get_id.js"></script>
+    <script src="/scripts/add_specialist.js"></script>
+    <script src="/scripts/load_dummy_data.js"></script>
+    <script src="/scripts/update_times.js"></script>
 
-    <script src="load_dummy_data.js"></script>
   </body>
 </html>

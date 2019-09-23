@@ -9,23 +9,17 @@ body {
   background: #0f2027; /* fallback for old browsers */
 }
 .container {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-around;
-  align-content: flex-start;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+
+  justify-content: center;
+  align-items: center;
 }
 .container div {
-  background-image: (white 0.1, white 1);
-  padding-top: 20px;
-  margin-top: 20px;
+}
 
-  box-shadow: 10px 0 10px 0 black;
-  transition: 0.3s;
-}
-.container div:hover {
-  background-color: #1a3642;
-  transform: scale(1.05);
-}
 th,
 td {
   color: white;
@@ -60,10 +54,8 @@ h2 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-h1::before {
-  content: "Specialist : ";
-}
-table tbody tr:nth-child(2) {
+
+.current {
   background-color: #47a676;
 }
 
@@ -184,4 +176,12 @@ a:hover {
   align-content: flex-end;
 
   justify-content: space-around;
+}
+.alert {
+  background: #47a676;
+  text-align: center;
+  padding-top: 10px;
+  width: 100vw;
+  height: 30px;
+  opacity: 0;
 }

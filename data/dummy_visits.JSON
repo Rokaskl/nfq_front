@@ -1,0 +1,44 @@
+[
+  {
+    "user": "0",
+    "spec": "0",
+    "time": "0",
+    "served": "false"
+  },
+  {
+    "user": "1",
+    "spec": "1",
+    "time": "0",
+    "served": "false"
+  },
+  {
+    "user": "1",
+    "spec": "0",
+    "time": "0",
+    "served": "false"
+  },
+  {
+    "user": "2",
+    "spec": "1",
+    "time": "0",
+    "served": "true"
+  },
+  {
+    "user": "3",
+    "spec": "1",
+    "time": "0",
+    "served": "false"
+  },
+  {
+    "user": "1",
+    "spec": "2",
+    "time": "0",
+    "served": "false"
+  },
+  {
+    "user": "3",
+    "spec": "0",
+    "time": "0",
+    "served": "false"
+  }
+]
