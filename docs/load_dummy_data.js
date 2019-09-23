@@ -9,7 +9,7 @@ document.querySelector("#load-dummy").addEventListener("click", function() {
       var users = [];
       users = JSON.parse(response);
       window.localStorage.setItem("users", response);
-    }
+    
   }, files[0]);
   loadJSON(function(response) {
    
@@ -17,7 +17,7 @@ document.querySelector("#load-dummy").addEventListener("click", function() {
       specialists = JSON.parse(response);
       window.localStorage.setItem("specialists", response);
   
-    }
+    
   }, files[1]);
   loadJSON(function(response) {
     
