@@ -1,8 +1,8 @@
 document.querySelector("#load-dummy").addEventListener("click", function() {
   var files = [
-    "data/dummy_users.json",
-    "data/dummy_spec.json",
-    "data/dummy_visits.json"
+    "dummy_users.json",
+    "dummy_spec.json",
+    "dummy_visits.json"
   ];
   loadJSON(function(response) {
     if (response != null) {
