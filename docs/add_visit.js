@@ -6,14 +6,21 @@ window.addEventListener("load", () => {
 
   specialists = JSON.parse(window.localStorage.getItem("specialists"));
   users = JSON.parse(window.localStorage.getItem("users"));
-  //Add specialists in selector
+  //Add specialists in \
+  if(specialists==null)
+    {
+      return;
+    }
   specialists.forEach(el => {
     var tmp = document.createElement("option");
     tmp.setAttribute("value", el.id);
     tmp.text = el.name;
     _spec.add(tmp);
   });
-  //Add users in selector
+  //Add users in 
+  if(users==null)
+  {return;}
+  
   users.forEach(el => {
     var tmp = document.createElement("option");
     tmp.setAttribute("value", el.name);

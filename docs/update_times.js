@@ -12,7 +12,10 @@ function updateEstTimes() {
   if (typeof window.localStorage.getItem("specialists") !== undefined) {
     specialists = JSON.parse(window.localStorage.getItem("specialists"));
   }
-
+  if(visits==null)
+    {
+      return
+    }
   visits.forEach(visit => {
     for (let i = 0; i < specialists.length; i++) {
       if (visit.spec == specialists[i].id) {

@@ -19,6 +19,10 @@ window.addEventListener("load", () => {
   if (typeof window.localStorage.getItem("visits") !== undefined) {
     visits = JSON.parse(window.localStorage.getItem("visits"));
   }
+  if(specialists==null)
+{
+  return;
+}
   specialists.forEach(el => {
     var tmp = document.createElement("option");
     tmp.setAttribute("id", el.id);

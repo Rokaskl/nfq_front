@@ -24,17 +24,26 @@ function updateUsers() {
   if (typeof window.localStorage.getItem("users") !== undefined) {
     users = JSON.parse(window.localStorage.getItem("users"));
   }
+
   if (typeof window.localStorage.getItem("specialists") !== undefined) {
     specialists = JSON.parse(window.localStorage.getItem("specialists"));
   }
-  if (typeof window.localStorage.getItem("users") !== undefined) {
+ 
+  if (typeof window.localStorage.getItem("visits") !== undefined) {
     visits = JSON.parse(window.localStorage.getItem("visits"));
+    if(visits==null)
+    {
+      return
+    }
     visits.sort(compareTime);
     if (tableSize > visits.length) {
       tableSize = visits.length;
     }
     visits.splice(tableSize, visits.length - tableSize);
     visits.sort(compareSpec);
+  }
+  else{
+    return;
   }
   output +=
     `<div class="table" = >` +
